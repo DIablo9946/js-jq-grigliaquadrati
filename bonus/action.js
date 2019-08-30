@@ -11,7 +11,7 @@ contGreen = 0;
 
 $( document ).ready(function() {
 
-
+if ($(this).hasClass("clicked") === false) {
 
 $(".col-sm:not(.red)").click(function(){
   $(this).css("background", "green");
@@ -24,6 +24,11 @@ $(".red").click(function(){
   contRed++;
   $("#contRed").text("Quadrati rossini : " + contRed);
 });
+} else {
+    $(this).addClass("clicked");
+};
+
+// Chiedere come mai il controllo non funziona
 
 
 });
