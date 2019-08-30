@@ -13,20 +13,22 @@ $( document ).ready(function() {
 
 if ($(this).hasClass("clicked") === false) {
 
-$(".col-sm:not(.red)").click(function(){
-  $(this).css("background", "green");
+if ($(".col-sm:not(.red)")) {
+  $(this).click(function(){
+    $(this).css("background", "green");
   contGreen++;
   $("#contGreen").text("Quadratini verdi : " + contGreen);
 });
-
+} else ($(".red")) {
 $(".red").click(function(){
   $(this).css("background", "red");
   contRed++;
   $("#contRed").text("Quadrati rossini : " + contRed);
 });
-} else {
-    $(this).addClass("clicked");
+}
+  $(this).addClass("clicked");
 };
+
 
 // Chiedere come mai il controllo non funziona
 
