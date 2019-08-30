@@ -5,35 +5,26 @@
 var contRed, contGreen, casuale;
 contRed = 0;
 contGreen = 0;
-casuale = Math.floor(Math.random() * 3) + 1;
+
 
 
 $( document ).ready(function() {
 
-if ($("div").hasClass("red")) {
-  $(".red").click(function(){
-    $(this).css("background", "red");
-    contRed++;
-    $("#contRed").text("Quadrati rossini : " + contRed);
-  });
-} else if ($("div").hasClass("green")) {
-  $(".green").click(function(){
-    $(this).css("background", "green");
-    contGreen++;
-    $("#contGreen").text("Quadratini verdi : " + contGreen);
-  });
-}
-
 // Provo a fare la generazione dei colori casuale
 
-$("div").click(function{
-  casuale;
+$(".col-sm").click(function(){
+  casuale = Math.floor(Math.random() * 3) + 1;
+  console.log(casuale);
 });
 
 if (casuale == 1) {
-
-} else if (casuale == 2) {
-
+    $(".col-sm").css("background", "green");
+    contGreen++;
+    $("#contGreen").text("Quadratini verdi : " + contGreen);
+} if (casuale == 2) {
+    $(this).css("background", "red");
+    contGreen++;
+    $("#contGreen").text("Quadratini verdi : " + contGreen);
 }
 
 

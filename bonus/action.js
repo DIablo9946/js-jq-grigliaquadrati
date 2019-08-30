@@ -11,20 +11,19 @@ contGreen = 0;
 
 $( document ).ready(function() {
 
-if ($("div").hasClass("red")) {
-  $(".red").click(function(){
-    $(this).css("background", "red");
-    contRed++;
-    $("#contRed").text("Quadrati rossini : " + contRed);
-  });
-} else if ($("div").hasClass("col-sm")) {
-  $(".col-sm").click(function(){
-    $(this).css("background", "green");
-    contGreen++;
-    $("#contGreen").text("Quadratini verdi : " + contGreen);
-  });
-}
 
+
+$(".col-sm:not(.red)").click(function(){
+  $(this).css("background", "green");
+  contGreen++;
+  $("#contGreen").text("Quadratini verdi : " + contGreen);
+});
+
+$(".red").click(function(){
+  $(this).css("background", "red");
+  contRed++;
+  $("#contRed").text("Quadrati rossini : " + contRed);
+});
 
 
 });

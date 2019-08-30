@@ -9,10 +9,15 @@
 }
 
 #first {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .container .col-sm {
   border: 1px black solid;
   height: 90px;
+}
+
+h1 {
+  display: inline-block;
+  margin-right: 140px;
 }
