@@ -8,15 +8,15 @@
 
 $( document ).ready(function() {
 
-if ($("div").hasClass("red")) {
-  $(".red").click(function(){
-    $(this).css("background", "red");
-  });
-} else if ($("div").hasClass("col-sm")) {
-  $(".col-sm").click(function(){
-    $(this).css("background", "green");
-  });
-}
+$(".col-sm:not(.red)").click(function(){
+  $(this).css("background", "green");
+});
+
+$(".red").click(function(){
+  $(this).css("background", "red");
+});
+
+
 
 
 
