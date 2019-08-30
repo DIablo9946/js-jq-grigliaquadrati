@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+#spzCont {
+  height: 80px;
+}
+
+#first {
+  margin-top: 80px;
+}
+
+.container .col-sm {
+  border: 1px black solid;
+  height: 70px;
+}
+
+/* .red {
+ background-color: red;
+} */
