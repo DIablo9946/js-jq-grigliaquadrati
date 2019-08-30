@@ -17,15 +17,20 @@ $(".col-sm").click(function(){
   console.log(casuale);
 });
 
-if (casuale == 1) {
-    $(".col-sm").css("background", "green");
+if (casuale === 1) {
+   $(".col-sm").click(function(){
+    $(this).css("background", "green");
     contGreen++;
     $("#contGreen").text("Quadratini verdi : " + contGreen);
-} if (casuale == 2) {
-    $(this).css("background", "red");
-    contGreen++;
-    $("#contGreen").text("Quadratini verdi : " + contGreen);
+  });
 }
+if (casuale === 2) {
+   $(".col-sm").click(function(){
+    $(this).css("background", "green");
+    contRed++;
+    $("#contRed").text("Quadratini rossi : " + contRed);
+  });
+};
 
 
 });
