@@ -11,23 +11,26 @@ contGreen = 0;
 
 $( document ).ready(function() {
 
-if ($(this).hasClass("clicked") === false) {
 
-if ($(".col-sm:not(.red)")) {
-  $(this).click(function(){
-    $(this).css("background", "green");
+$(".col-sm:not(.red)").click(function(){
+  console.log($(this).hasClass("clicked"));
+  if ($(this).hasClass("clicked") === false) {
+    $(this).addClass("green");
   contGreen++;
   $("#contGreen").text("Quadratini verdi : " + contGreen);
+   $(this).addClass("clicked");
+ };
 });
-} else ($(".red")) {
+
 $(".red").click(function(){
-  $(this).css("background", "red");
+    if ($(this).hasClass("clicked") === false) {
+  $(this).addClass("redc");
   contRed++;
   $("#contRed").text("Quadrati rossini : " + contRed);
+   $(this).addClass("clicked");
+ };
 });
-}
-  $(this).addClass("clicked");
-};
+
 
 
 // Chiedere come mai il controllo non funziona

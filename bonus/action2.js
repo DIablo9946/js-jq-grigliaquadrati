@@ -13,24 +13,26 @@ $( document ).ready(function() {
 // Provo a fare la generazione dei colori casuale
 
 $(".col-sm").click(function(){
-  casuale = Math.floor(Math.random() * 3) + 1;
+  casuale = Math.floor(Math.random() * 2) + 1;
   console.log(casuale);
+
+  if ($(this).hasClass("clicked") === false) {
+
+  if (casuale === 1) {
+      $(this).css("background", "green");
+      contGreen++;
+      $("#contGreen").text("Quadratini verdi : " + contGreen);
+  }
+  if (casuale === 2) {
+      $(this).css("background", "red");
+      contRed++;
+      $("#contRed").text("Quadratini rossi : " + contRed);
+  };
+  $(this).addClass("clicked");
+};
 });
 
-if (casuale === 1) {
-   $(".col-sm").click(function(){
-    $(this).css("background", "green");
-    contGreen++;
-    $("#contGreen").text("Quadratini verdi : " + contGreen);
-  });
-}
-if (casuale === 2) {
-   $(".col-sm").click(function(){
-    $(this).css("background", "green");
-    contRed++;
-    $("#contRed").text("Quadratini rossi : " + contRed);
-  });
-};
+
 
 
 });

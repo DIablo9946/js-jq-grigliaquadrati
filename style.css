@@ -21,3 +21,11 @@ h1 {
   display: inline-block;
   margin-right: 140px;
 }
+
+.redc {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
